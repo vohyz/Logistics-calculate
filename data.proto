@@ -1,0 +1,12 @@
+syntax = "proto3";
+service RouteBuild {
+  rpc Build(order_place) returns (return_message){}
+}
+message order_place {
+  string begin_place = 1;
+  string end_place = 2;
+  string id = 3;
+}
+message return_message {
+  string ok = 1;
+}
